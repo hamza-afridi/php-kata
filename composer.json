@@ -1,0 +1,29 @@
+{
+    "name": "hamza/php-kata",
+    "description": "PHP 8 kata for JavaScript developers — types, classes, interfaces, namespaces, Composer, PSR standards",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test:types": "phpunit --filter TypesTest",
+        "test:classes": "phpunit --filter ProductTest",
+        "test:interfaces": "phpunit --filter PaymentTest",
+        "test:namespaces": "phpunit --filter NamespaceTest",
+        "test:psr": "phpunit --filter LoggerTest"
+    }
+}
